@@ -3,7 +3,7 @@ import os
 import shutil
 import zipfile
 from io import BytesIO
-from backend import parser
+from resumeParser import parser
 # from test import filter_resumes
 
 st.title("Resume Semantic Search")
