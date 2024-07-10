@@ -55,7 +55,7 @@ def initialize_llm(api_key, temperature=0.8, max_tokens=500, model_name="gpt-3.5
     return llm
 
 def create_retrieval_chain(llm, vectordb):
-    chain=RetrievalQAWithSourcesChain.from_llm(llm=llm, retriever=vectordb.as_retriever())
+    chain=RetrievalQAWithSourcesChain.from_llm(llm=llm, retriever=vectordb.as_retriever(search_kwargs={"k": 100}))
     return chain
 
 def query_resumes(chain, query):
