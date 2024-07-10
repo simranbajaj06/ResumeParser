@@ -7,7 +7,7 @@ from langchain_community.embeddings import HuggingFaceEmbeddings
 from langchain.document_loaders import PyPDFLoader, DirectoryLoader
 from langchain.chains import RetrievalQAWithSourcesChain
 from PyPDF2.errors import PdfReadError 
-from FolderCleaner import folder_cleaner
+from clean import folder_cleaner
 def initialize_embeddings(model_name="BAAI/bge-base-en-v1.5", device='cpu'):
     hfembeddings=HuggingFaceEmbeddings(
         model_name=model_name,
